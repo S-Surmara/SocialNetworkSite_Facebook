@@ -92,6 +92,10 @@ public class SocialNetworkManager {
         postService.deletePost(postId);
     }
 
+    public Post getPost(String postId) { return postService.getPost(postId); }
+
+    public List<Post> getPostsByUser(String userId) { return postService.getPostsByUser(userId); }
+
     public void likePost(String postId, String likerUserId) {
         postService.likePost(postId, likerUserId);
     }

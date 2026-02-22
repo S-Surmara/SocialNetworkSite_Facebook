@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Post {
     private final String postId;
@@ -29,7 +30,7 @@ public class Post {
         this.description = builder.description;
         this.visibility = builder.visibility;
         this.likedByUserIds = new HashSet<>();
-        this.comments = new ArrayList<>();
+        this.comments = new CopyOnWriteArrayList<>();
     }
 
     public String getPostId() {
